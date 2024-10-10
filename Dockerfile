@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instala as dependências do Node.js
-RUN npm install
+RUN npm install --verbose
 
 # Copia todo o código da aplicação para o diretório de trabalho
 COPY . .
 
 # Constrói a aplicação
-RUN npm run build
+RUN npm run build --verbose
 
 # Expõe a porta que o serviço irá rodar
 EXPOSE 3000
